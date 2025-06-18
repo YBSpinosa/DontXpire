@@ -1,10 +1,21 @@
 import pandas as pd
+import streamlit as st
+
+#Las claves del dataframe son: "Title", "Ingredients", "Instructions"
+
+#https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame
+
+
 
 df = pd.read_csv('recipes_dataset.csv')
-print(df.columns)              # Title, Ingredients, Instructions
-print(df.iloc[0]['Instructions'])  # Primer paso completo
+print(df.columns)     
+print()
+print(df.size)     
+print()
+print(df.iloc[0]['Ingredients']) 
 
-# Buscar recetas que contengan "garlic"
-filtro = df['Ingredients'].str.contains('garlic', case=False)
+ingredient = input("Introduzca el nombre del ingrediente 1")
+
+filtro = df['Ingredients'].str.contains(ingredient, case=False)
 print(df[filtro].head()[['Title','Ingredients']])
 
