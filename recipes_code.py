@@ -5,7 +5,7 @@ import streamlit as st
 
 #https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame
 
-
+#https://docs.streamlit.io/develop/api-reference
 
 df = pd.read_csv('recipes_dataset.csv')
 print(df.columns)     
